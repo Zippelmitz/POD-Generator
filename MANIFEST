@@ -1,0 +1,10 @@
+Makefile.PL
+README
+README.md
+LICENSE
+CHANGES
+lib/POD/Generator.pm
+lib/Module/Documentation.pm
+bin/genpod
+t/podtest.t
+t/testmodule.pl
