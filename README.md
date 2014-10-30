@@ -18,7 +18,7 @@ on whether you use nice modern features of perl, or are a cave-man/gal.
         package MY::MODULE;
 
         use Module::Documentation;
-        doc($Module::Documentation::SYNOPSIS,"This here is my rip-roarin' Texan synopsis (yee-haw)");
+        doc(&Module::Documentation::SYNOPSIS,"This here is my rip-roarin' Texan synopsis (yee-haw)");
 
         doc(&MY::MODULE::SOME_FUNC,"Thar be my method documentation, arr");
         sub SOME_FUNC {...}
@@ -31,6 +31,8 @@ on whether you use nice modern features of perl, or are a cave-man/gal.
 
 * If your super-awesome methods manage to deliberately die/croak/confess/exit or otherwise do things to terminate execution, this is automatically noted, along with the messages/codes/types as applicable.
 * Will even try to auto-fill your return type if you assert() (or apply a type constraint to) it immediately before (or during) return!
+* If you are writing a script, it will do it's best to figure out what you are doing with ARGV, or give you better details when you use some sort of GetOpt.
+* 'private' functions (such as those beginning with underscores), or methods that are explicitly private will be ignored correctly.
 
 So why should I do this?????  I LOVE WASTING TIME, MAN!  Don't you know I'm paid by the hour???!
 
